@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="regform.css">
+    </head>
+<main>
+
+            <div class= "form-container">
+            <section id = "form">
+                <h1>Registration Form</h1>
+                
+                <!-- Registration Form -->
+                <form>
+
+                    <!-- Name Field-->
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required><br>
+
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" required><br>
+                    <!-- Username -->
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+
+                <div>
+                    <label for="pass">Password (8 characters minimum):</label>
+                    <input type="password" id="pass" name="password" minlength="8" required />
+                </div>
+                <div>
+                    <label for="pass">Confirm Password</label>
+                    <input type="password" id="pass" name="password" minlength="8" required />
+                </div>
+                  <!-- Calling Code and Name -->
+                    <select class="form-select" autocomplete="country" id="country" name="country">
+                    <option>select country</option>
+                    <option value="49">Germany +49</option>
+                    <option value="81">Japan +81</option>
+                    <option value="63">Philippines +63</option>
+                    <option value="44">United Kingdom +44</option>
+                    <option value="1">United States +1</option>
+                    </select>
+                    <!-- Phone# Field -->
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{4}-[0-9]{3}"required><br>
+                    <!-- Select All countries -->
+                  
+                    <!-- Birth Date -->
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <label for="start_date">Birth Date:</label><span class="required"></span>
+                    <input type="date" class="form-control" id="start_date"  name="start_date" value="{{ old('start_date') }}" required>                            
+                </div>
+                    
+
+                    <!-- Email Field -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <!-- Address Field -->
+                    <label for="address">Home Address:</label> <br>
+                    <textarea id="address" name="address" required></textarea><br>
+
+                    <!-- Region -->
+                    <label for="region">Region:</label>
+                    <select id="region" name="region" required>
+                        <option value="region">Select a region</option>
+                        <option value="calabarzon">IV-A CALABARZON</option>
+                        <option value="mimaropa">IV-B MIMAROPA</option>
+                        <option value="car">CAR</option>
+                        <option value="ncr">NCR</option>
+                    </select><br>
+
+                    <!-- Municipality-->
+                    <label for="municipality">Municipality:</label> <br>
+                    <input type="text" id="municipality" name="municipality" required><br>
+                    <!-- Postal Code -->
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" id="zip" name="zip" required><br>
+
+                    
+                <div>
+                    <input type="checkbox" id="scales" name="scales" unchecked required/>
+                    <label for="terms">I agree with the Terms & Conditions</label>
+                </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            </div>
+
+        </main>

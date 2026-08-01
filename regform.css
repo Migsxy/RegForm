@@ -1,0 +1,28 @@
+main {
+    padding: 4px 0px;
+    width: 100%;
+    margin: 0 auto;   
+    box-sizing: border-box;
+    background-color:#e9e5e5;
+    border-radius: 12px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;   /* centers vertically */
+  padding: 50px; /*ht edges */
+  background-color: #d1e5e3;
+}
+
+form {
+  width: 100%;
+  max-width: 800px; 
+  margin: auto; /* centers the form */
+  padding: 50px; /* adds padding around the form */
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;    margin: 0 auto;
+}
