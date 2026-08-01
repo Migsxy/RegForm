@@ -14,36 +14,34 @@
                 <!-- Registration Form -->
                 <form>
 
-                    <!-- Name Field-->
-                    <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" required><br>
-
-                    <label for="lastname">Last Name:</label>
-                    <input type="text" id="lastname" name="lastname" required><br>
-                    <!-- Username -->
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required><br>
-
+                <!-- Name Field-->
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required><br>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required><br>
+                <!-- Username -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <!-- Password -->
                 <div>
-                    <label for="pass">Password (8 characters minimum):</label>
-                    <input type="password" id="pass" name="password" minlength="8" required />
-                </div>
-                <div>
-                    <label for="pass">Confirm Password</label>
-                    <input type="password" id="pass" name="password" minlength="8" required />
+                    <label for="password">Password (8 characters minimum):</label>
+                    <input type="password" id="password" name="password" minlength="8" required />
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="passwordconfirm" minlength="8" required />
+                    <p id="password-error" class="error-message" aria-live="polite"></p>
                 </div>
                   <!-- Calling Code and Name -->
                     <select class="form-select" autocomplete="country" id="country" name="country">
                     <option>select country</option>
-                    <option value="49">Germany +49</option>
-                    <option value="81">Japan +81</option>
-                    <option value="63">Philippines +63</option>
-                    <option value="44">United Kingdom +44</option>
-                    <option value="1">United States +1</option>
+                    <option value="49">Germany | +49</option>
+                    <option value="81">Japan | +81</option>
+                    <option value="63">Philippines | +63</option>
+                    <option value="44">United Kingdom | +44</option>
+                    <option value="1">United States | +1</option>
                     </select>
                     <!-- Phone# Field -->
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{4}-[0-9]{3}"required><br>
+                    <input type="tel" id="phone" name="phone" required><br>
                     <!-- Select All countries -->
                   
                     <!-- Birth Date -->
@@ -81,7 +79,7 @@
                     
                 <div>
                     <input type="checkbox" id="scales" name="scales" unchecked required/>
-                    <label for="terms">I agree with the Terms & Conditions</label>
+                    <label for="terms">I agree with the <a href ="termscondition.html">Terms and Conditions</a> </label>
                 </div>
 
                     <button type="submit">Submit</button>
@@ -90,3 +88,16 @@
             </div>
 
         </main>
+        <script src="form-validation.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.querySelector('form');
+                const passwordInput = document.getElementById('password');
+                const confirmInput = document.getElementById('confirm-password');
+                const errorElement = document.getElementById('password-error');
+
+                if (form && passwordInput && confirmInput && errorElement) {
+                    initializePasswordConfirmation(form, passwordInput, confirmInput, errorElement);
+                }
+            });
+        </script>
