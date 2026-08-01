@@ -49,4 +49,16 @@
 
     validatePasswordMatch();
   };
+  
 })();
+function chkfName() {
+var myfname = document.getElementById("fname");
+var pos = myfname.value.search(/^[A-Z][a-z]+$/);
+
+if (pos != 0) {
+    fname.style.borderColor = "red";
+    return false;
+} else
+    return true;
+}
+

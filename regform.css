@@ -164,6 +164,7 @@ button:disabled {
 }
 
 .error-message {
+  text-align: left;
   color: #c0392b;
   font-size: 0.9rem;
   min-height: 1rem;
@@ -190,4 +191,14 @@ button:disabled {
   .form-row {
     grid-template-columns: 1fr;
   }
+}
+input:invalid {
+  background-color: #ffdddd;
+  border-color: #ff4d4d;
+}
+input:valid {
+  background-color: #ddffdd;
+}
+form-zip:valid {
+  border: 5px solid #ddffdd;
 }
