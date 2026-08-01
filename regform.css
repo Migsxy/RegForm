@@ -199,6 +199,10 @@ input:invalid {
 input:valid {
   background-color: #ddffdd;
 }
+form-zip:invalid {
+  border: 5px solid #ffdddd;
+  border-color: #ff4d4d;
+}
 form-zip:valid {
   border: 5px solid #ddffdd;
 }

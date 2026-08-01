@@ -29,15 +29,13 @@
               </div>
             </div>
 
-            <div class="form-group" aria-required="true">
+            <div class="form-group">
                   <label for="gender">Gender</label>
-                <div class="some-class">
-                <input type="radio" class="radio" name="male" value="male" id="y"/>
-                <label for="y">Male</label>
-                <input type="radio" class="radio" name="female" value="female" id="z" />
-                <label for="z">Female</label>
-                <input type="radio" class="radio" name="prefer-not-to-say" value="prefer-not-to-say" id="prefer-not-to-say" />
-                <label for="prefer-not-to-say">Prefer not to say</label>
+                  <select id="gender" name="gender" required>
+                    <option value="">Select your gender</option> 
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
                 </div>
             </div>
 
@@ -142,6 +140,10 @@
 
         if (form && passwordInput && confirmInput && errorElement) {
           initializePasswordConfirmation(form, passwordInput, confirmInput, errorElement);
+        }
+
+        if (form) {
+          initializeNameAndZipValidation(form);
         }
       });
     </script>
